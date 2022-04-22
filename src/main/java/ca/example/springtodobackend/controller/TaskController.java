@@ -69,7 +69,7 @@ public class TaskController {
 
     /**
      * Notice:
-     * Return an array containing all tasks with each response.
+     * Return an array containing all tasks with each successful response.
      * In order to keep front-end data up to date.
      */
     @PostMapping("/tasks")
@@ -93,7 +93,7 @@ public class TaskController {
 
     /**
      * Notice:
-     * Return an array containing all tasks with each response.
+     * Return an array containing all tasks with each successful response.
      * In order to keep front-end data up to date.
      */
     @PutMapping("/tasks/{id}")
@@ -125,7 +125,7 @@ public class TaskController {
 
     /**
      * Notice:
-     * Return an array containing all tasks with each response.
+     * Return an array containing all tasks with each successful response.
      * In order to keep front-end data up to date.
      */
     @DeleteMapping("/tasks/{id}")
