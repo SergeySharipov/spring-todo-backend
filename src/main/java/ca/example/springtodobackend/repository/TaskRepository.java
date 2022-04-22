@@ -13,8 +13,14 @@ public interface TaskRepository {
     @Select("SELECT * FROM tasks WHERE id = #{id}")
     Task findById(long id);
 
+    @Select("SELECT * FROM tasks WHERE title LIKE '%#{text}%'")
+    List<Task> findByTitleContaining(String text);
+
     @Delete("DELETE FROM tasks WHERE id = #{id}")
     int deleteById(long id);
+
+    @Delete("DELETE FROM tasks")
+    int deleteAll();
 
     @Insert("INSERT INTO tasks(title, description) VALUES (#{title}, #{description})")
     int insert(Task task);
