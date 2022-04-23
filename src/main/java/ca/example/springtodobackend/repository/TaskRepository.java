@@ -25,6 +25,6 @@ public interface TaskRepository {
     @Insert("INSERT INTO tasks(title, description) VALUES (#{title}, #{description})")
     int insert(Task task);
 
-    @Update("UPDATE tasks SET title=#{title}, description=#{description} WHERE id=#{id}")
+    @Update("UPDATE tasks SET title=#{title}, description=#{description}, completed=#{completed} WHERE id=#{id}")
     int update(Task task);
 }
