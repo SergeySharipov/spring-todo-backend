@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8082")
 @RestController
 @RequestMapping("/api")
 public class TaskController {
@@ -107,6 +107,7 @@ public class TaskController {
             if (task != null) {
                 task.setTitle(updatedTask.getTitle());
                 task.setDescription(updatedTask.getDescription());
+                task.setCompleted(updatedTask.isCompleted());
                 taskRepository.update(task);
 
                 List<Task> tasks = taskRepository.findAll();
